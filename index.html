@@ -36,7 +36,7 @@ h1, h2, h3, h4, h5, h6 {
   <hr>
 
   <!-- Contact Section -->
-<form target="_self">
+<form target="_self" action="submit.php" method="POST" enctype="multipart/form-data">
 
 <div class="w3-container w3-padding-64" id="contact">
     <h1>We are here.</h1><hr><br>
@@ -72,15 +72,6 @@ h1, h2, h3, h4, h5, h6 {
     
     if (!userData.email) {
         return res.status(422).send('Please provide your Email Address')
-    }
-    
-    if (!userData.password) {
-        return res.status(422).send('Please provide your Password')
-    }
-
-    // Password Verification
-    if (userData.password != userData.password_confirmation) {
-        return res.status(422).json('Password & Password Confirmation do not match')
     }
 </script> 
 
